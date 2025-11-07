@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Surface
@@ -54,15 +56,21 @@ fun TampilData(navController: NavHostController, viewModel: Any){
                         .fillMaxWidth()
                         .padding(vertical = 6.dp),
                     shape = RoundedCornerShape(16.dp),
-                    elevation = CardDefaults.cardElevation(8.sp)
+                    elevation = CardDefaults.cardElevation(8.dp)
                 ){
-                    Column (modifier = Modifier.padding((16.dp)){
+                    Column (modifier = Modifier.padding(16.dp)){
                         Text(text = peserta, fontSize = 16.sp)
                     }
                 }
                 Spacer(modifier = Modifier.height(20.dp))
 
+                Button(
+                    onClick = { navController.navigate("Formulir")},
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.White),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
+                ) {
 
+                }
             }
         }
     }
