@@ -1,6 +1,9 @@
 package com.example.tugaspraktikum.view
 
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
@@ -15,5 +18,7 @@ fun TampilData(navController: NavHostController, viewModel: Any){
     val gradient = Brush.verticalGradient(
         colors = listOf(Color(0xFF313647), Color(0xFF1A3D64))
     )
+    Surface (modifier = Modifier.fillMaxSize()){
 
+    }
 }
