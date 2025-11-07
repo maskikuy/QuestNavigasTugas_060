@@ -71,6 +71,8 @@ fun Formulir(navController: NavHostController, viewModel: Any) {
                 textAlign = TextAlign.Center
             )
 
+            Spacer(modifier = Modifier.height(20.dp))
 
-    }
+
+
 }
