@@ -156,3 +156,20 @@ fun Formulir(navController: NavHostController, viewModel: Any) {
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth()
             )
+            Spacer(modifier = Modifier.height(24.dp))
+
+
+            Button(
+                onClick = { },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Gray)
+            ) {
+                Text("Submit", fontSize = 18.sp, color = Color.Black)
+            }
+
+        }
+    }
+}
