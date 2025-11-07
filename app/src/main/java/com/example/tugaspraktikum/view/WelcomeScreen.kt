@@ -35,7 +35,7 @@ fun WelcomeScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Image(
-                painter = painterResource(id = R.drawable.cardlist_logo),
+                painter = painterResource(id = R.drawable.TEM_EKITOYAMA),
                 contentDescription = "Logo",
                 modifier = Modifier.size(200.dp)
             )

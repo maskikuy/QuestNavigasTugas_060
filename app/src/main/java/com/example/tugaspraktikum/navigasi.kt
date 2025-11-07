@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.tugaspraktikum.view.Formulir
+import com.example.tugaspraktikum.view.TampilData
+import com.example.tugaspraktikum.view.WelcomeScreen
 
 enum class navigasi {
     WelcomeScreen,
@@ -29,7 +31,7 @@ fun DataApp(
             Formulir(navController = navController, viewModel = viewModel())
         }
         composable(route = navigasi.TampilData.name) {
-            navigasi.TampilData(navController = navController, viewModel = viewModel())
+            TampilData(navController = navController, viewModel = viewModel())
         }
     }
 }
