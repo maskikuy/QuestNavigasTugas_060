@@ -2,11 +2,11 @@ package com.example.tugaspraktikum
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-
+import com.example.tugaspraktikum.view.Formulir
 
 enum class navigasi {
     WelcomeScreen,
@@ -29,7 +29,7 @@ fun DataApp(
             Formulir(navController = navController, viewModel = viewModel())
         }
         composable(route = navigasi.TampilData.name) {
-            TampilData(navController = navController, viewModel = viewModel())
+            navigasi.TampilData(navController = navController, viewModel = viewModel())
         }
     }
 }
