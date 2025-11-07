@@ -44,5 +44,13 @@ fun Formulir(navController: NavHostController, viewModel: Any) {
     val genderOptions = listOf("Laki-laki", "Perempuan")
     val statusOptions = listOf("Janda", "Lajang", "Duda")
 
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        shape = RoundedCornerShape(20.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFFF8F8F8))
+    ) {
 
 }
