@@ -58,7 +58,7 @@ fun TampilData(navController: NavHostController, viewModel: Any){
                     shape = RoundedCornerShape(16.dp),
                     elevation = CardDefaults.cardElevation(8.dp)
                 ){
-                    Column (modifier = Modifier.padding(16.dp)){
+                    Column(modifier = Modifier.padding(16.dp)) {
                         Text(text = peserta, fontSize = 16.sp)
                     }
                 }
@@ -69,7 +69,16 @@ fun TampilData(navController: NavHostController, viewModel: Any){
                     colors = ButtonDefaults.buttonColors(containerColor = Color.White),
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
                 ) {
+                    Text("Beranda")
+                }
+                Spacer(modifier = Modifier.height(23.dp))
 
+                Button(
+                    onClick = { navController.navigate("Formulir") },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.White),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
+                ) {
+                    Text("Formulir Pendaftaran", color = Color(0xFF6200EE))
                 }
             }
         }
