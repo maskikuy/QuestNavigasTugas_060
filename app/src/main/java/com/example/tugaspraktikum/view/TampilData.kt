@@ -2,8 +2,11 @@ package com.example.tugaspraktikum.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -40,6 +43,13 @@ fun TampilData(navController: NavHostController, viewModel: Any){
                 fontWeight = FontWeight.Bold,
                 color = Color.White
             )
+            Spacer(modifier = Modifier.height(20.dp))
+
+            pesertaList.forEach { peserta->
+                Card (
+
+                )
+            }
         }
     }
 }
