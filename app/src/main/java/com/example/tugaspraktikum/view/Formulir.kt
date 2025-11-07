@@ -58,5 +58,19 @@ fun Formulir(navController: NavHostController, viewModel: Any) {
                 .padding(20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Text(
+                text = "Formulir Pendaftaran",
+                color = Color.White,
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
+                    .background(Color.Cyan)
+                    .padding(vertical = 14.dp),
+                textAlign = TextAlign.Center
+            )
 
+
+    }
 }
