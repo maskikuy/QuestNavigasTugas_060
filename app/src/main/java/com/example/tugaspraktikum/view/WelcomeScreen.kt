@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.tugaspraktikum.R
+import com.example.tugaspraktikum.navigasi
 
 @Composable
 fun WelcomeScreen(navController: NavHostController) {
@@ -35,26 +36,26 @@ fun WelcomeScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Image(
-                painter = painterResource(id = R.drawable.TEM_EKITOYAMA),
+                painter = painterResource(id = R.drawable.temekitoyama),
                 contentDescription = "Logo",
                 modifier = Modifier.size(200.dp)
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            Text("Hibrizi Fathin Dhonan", fontSize = 25.sp)
+            Text("Rizky Gusti afiq", fontSize = 25.sp)
             Text(
-                "20230140071", fontSize = 23.sp,
+                "20230140060", fontSize = 23.sp,
                 color = MaterialTheme.colorScheme.secondary
             )
 
             Spacer(modifier = Modifier.height(32.dp))
 
             Button(
-                onClick = { navController.navigate("TampilData") },
+                onClick = { navController.navigate(navigasi.Formulir.name) },
                 modifier = Modifier.fillMaxWidth(0.7f).height(50.dp)
             ) {
-                Text("Submit")
+                Text("Isi Formulir")
             }
         }
     }

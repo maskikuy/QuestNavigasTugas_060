@@ -19,16 +19,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.tugaspraktikum.R
+import com.example.tugaspraktikum.DataPeserta
+import com.example.tugaspraktikum.navigasi
 
 @Composable
-fun TampilData(navController: NavHostController, viewModel: Any) {
-    val pesertaList = stringArrayResource(id = R.array.data_peserta)
+fun TampilData(navController: NavHostController, pesertaList: List<DataPeserta>
+) {
+
     val gradient = Brush.verticalGradient(
         colors = listOf(Color(0xFF313647), Color(0xFF1A3D64))
     )
@@ -58,27 +59,31 @@ fun TampilData(navController: NavHostController, viewModel: Any) {
                     elevation = CardDefaults.cardElevation(8.dp)
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
-                        Text(text = peserta, fontSize = 16.sp)
+
+                        Text(text = "Nama: ${peserta.nama}", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                        Text(text = "Gender: ${peserta.jenisKelamin}", fontSize = 14.sp)
+                        Text(text = "Status: ${peserta.status}", fontSize = 14.sp)
+                        Text(text = "Alamat: ${peserta.alamat}", fontSize = 14.sp)
                     }
                 }
+            }
 
-                Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
-                Button(
-                    onClick = { navController.navigate("WelcomeScreen") },
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
-                ) {
-                    Text("Beranda")
-                }
-                Spacer(modifier = Modifier.height(12.dp))
+            Button(
+                onClick = { navController.navigate(navigasi.WelcomeScreen.name) },
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
+            ) {
+                Text("Beranda")
+            }
+            Spacer(modifier = Modifier.height(12.dp))
 
-                Button(
-                    onClick = { navController.navigate("Formulir") },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.White),
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
-                ) {
-                    Text("Formulir Pendaftaran", color = Color(0xFF6200EE))
-                }
+            Button(
+                onClick = { navController.navigate(navigasi.Formulir.name) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color.White),
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
+            ) {
+                Text("Formulir Pendaftaran", color = Color(0xFF6200EE))
             }
         }
     }
